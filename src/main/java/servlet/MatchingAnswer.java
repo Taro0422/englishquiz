@@ -36,12 +36,6 @@ public class MatchingAnswer extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String userAnswer = request.getParameter("value");
-		String answer = request.getParameter("value");
-		int correctAnswer=0;
-		if(userAnswer.equals(answer)) {
-			correctAnswer++;
-		}
 		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/quizAnswer.jsp");
 		dispatcher.forward(request, response);
 		

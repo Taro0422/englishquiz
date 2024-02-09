@@ -19,6 +19,7 @@
     </div>
     	<p class="question">${quizList[quizNumber].question}</p>
     	<div class="flex-box">
+    	
     	<p class= choice-box>${quizList[quizNumber].choice_a}<p>
     	
     	<p class= choice-box>${quizList[quizNumber].choice_b}<p>
@@ -26,7 +27,9 @@
     	</div>
     	<div class="flex-box">
     	<p class= choice-box>${quizList[quizNumber].choice_c}</p>
-    	
+    	<c:if test="${quizList[quizNumber].choice_d}.equals(${quizList[quizNumber].answer})">
+    	<p class= choice-box id=yellow>色を替えたい</p>
+    	</c:if>
     	<p class= choice-box>${quizList[quizNumber].choice_d}</p>
     	</div>
     	<p class=answer>${quizList[quizNumber].answer}</p>
