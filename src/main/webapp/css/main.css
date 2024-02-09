@@ -1,0 +1,28 @@
+body{
+    width: 100%;
+}
+.items{
+    width:60%;
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto;
+
+}
+.btn{
+    display: block;
+    border: solid 2px black;
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    width:300px;
+    height: 150px;
+    text-align: center;
+    margin:0 20px;
+    text-decoration: none;
+    line-height: 150px;
+}
+.welcome{
+    font-size: 30px;
+    color: white;
+    margin:20px 70px;
+}

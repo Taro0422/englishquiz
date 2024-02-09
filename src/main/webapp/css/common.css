@@ -1,0 +1,10 @@
+body{
+    background-image:url("../img/EnglishQuiz_back.jpg");
+    background-size: cover;
+}
+h1{
+    color:white;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 3rem;
+}
