@@ -19,18 +19,40 @@
     </div>
     	<p class="question">${quizList[quizNumber].question}</p>
     	<div class="flex-box">
-    	
-    	<p class= choice-box>${quizList[quizNumber].choice_a}<p>
-    	
-    	<p class= choice-box>${quizList[quizNumber].choice_b}<p>
-    	
+    		<c:choose>
+    			<c:when test="${quizList[quizNumber].choice_a.equals(quizList[quizNumber].answer)}">
+    				<p class= choice-box id=yellow>${quizList[quizNumber].choice_a}</p>
+    			</c:when>
+    			<c:otherwise>
+    				<p class= choice-box>${quizList[quizNumber].choice_a}<p></p>
+    			</c:otherwise>
+    		</c:choose>
+    		<c:choose>
+    			<c:when test="${quizList[quizNumber].choice_b.equals(quizList[quizNumber].answer)}">
+    				<p class= choice-box id=yellow>${quizList[quizNumber].choice_b}</p>
+    			</c:when>
+    			<c:otherwise>
+    				<p class= choice-box>${quizList[quizNumber].choice_b}<p></p>
+    			</c:otherwise>
+    		</c:choose>
     	</div>
     	<div class="flex-box">
-    	<p class= choice-box>${quizList[quizNumber].choice_c}</p>
-    	<c:if test="${quizList[quizNumber].choice_d}.equals(${quizList[quizNumber].answer})">
-    	<p class= choice-box id=yellow>色を替えたい</p>
-    	</c:if>
-    	<p class= choice-box>${quizList[quizNumber].choice_d}</p>
+    		<c:choose>
+    			<c:when test="${quizList[quizNumber].choice_c.equals(quizList[quizNumber].answer)}">
+    				<p class= choice-box id=yellow>${quizList[quizNumber].choice_c}</p>
+    			</c:when>
+    			<c:otherwise>
+    				<p class= choice-box>${quizList[quizNumber].choice_c}<p></p>
+    			</c:otherwise>
+    		</c:choose>
+    		<c:choose>
+    			<c:when test="${quizList[quizNumber].choice_d.equals(quizList[quizNumber].answer)}">
+    				<p class= choice-box id=yellow>${quizList[quizNumber].choice_d}</p>
+    			</c:when>
+    			<c:otherwise>
+    				<p class= choice-box>${quizList[quizNumber].choice_d}</p>
+    			</c:otherwise>
+    		</c:choose>
     	</div>
     	<p class=answer>${quizList[quizNumber].answer}</p>
     	<div class="flex">

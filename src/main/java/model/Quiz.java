@@ -13,7 +13,7 @@ public class Quiz implements Serializable{
 	private String explanation;
 	
 	public Quiz() {}
-
+	
 	public Quiz(int quiz_Id, String question, String choice_a, String choice_b, String choice_c, String choice_d,
 			String answer, String explanation) {
 		super();
@@ -57,7 +57,25 @@ public class Quiz implements Serializable{
 
 	public String getExplanation() {
 		return explanation;
-	};
+	}
+
+	public void setChoice_a(String choice_a) {
+		this.choice_a = choice_a;
+	}
+
+	public void setChoice_b(String choice_b) {
+		this.choice_b = choice_b;
+	}
+
+	public void setChoice_c(String choice_c) {
+		this.choice_c = choice_c;
+	}
+
+	public void setChoice_d(String choice_d) {
+		this.choice_d = choice_d;
+	}
+
+	
 	
 	
 }

@@ -18,7 +18,7 @@
         <input type="password" name="pass" class=input_pass placeholder="PASS"><br>
         <div class =flex>
             <input type="submit" value="Login" class="btn1">
-            <a href ="LoginServlet" class="btn1">Register</a>
+            <a href ="LoginServlet?action=0" class="btn1">Register</a>
         </div>
     </form>
 </body>

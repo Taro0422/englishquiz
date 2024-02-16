@@ -31,7 +31,9 @@
     	<input type="radio" name="choice" value="${quizList[quizNumber].choice_d}" class=choice id=box4>
     	<label class= choice-box for=box4>${quizList[quizNumber].choice_d}</label>
     	</div>
-    	<input type="hidden" value="${quizList[quizNumber].answer}">
+    	<input type="hidden" name ="question"value="${quizList[quizNumber].question}">
+    	<input type="hidden" name ="answer"value="${quizList[quizNumber].answer}">
+    	<input type="hidden" name ="quizId"value="${quizList[quizNumber].quiz_Id}">
     	<div class="center">
     	<input type="submit" value="Answer" class=btn1>
     	</div>

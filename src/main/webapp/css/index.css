@@ -12,3 +12,20 @@
 input{
     margin-top: 30px;
 }
+a.btn1 {
+    display: block;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    margin-top: 30px;
+    width: 80px;
+    text-align: center;
+    margin-left: 20px;
+    font-size: 13px;
+    line-height: 2.2;
+    border-radius: 2px;
+    border: solid 1px gray;
+}
+.flex{
+	display: flex;
+}

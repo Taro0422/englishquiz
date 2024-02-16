@@ -1,0 +1,32 @@
+.callname {
+    text-align: center;
+    margin-top: 2rem;
+    color: white;
+    font-size: 30px;
+}
+.quizCoreect {
+    margin-top: 2rem;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+.evaluation {
+	margin-top: 2rem;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+.toMain{
+	text-decoration: none;
+    background-color: green;
+    color: white;
+    width: 90px;
+    height: 24px;
+    border-radius: 3px;
+    font-size: 20px;
+    border: solid 1px black;
+    text-align: center;
+    position: absolute;
+    left: 70%;
+    line-height: 1.2;
+}

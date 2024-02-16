@@ -45,7 +45,7 @@ public class GivingQuizServlet extends HttpServlet {
 				dispatcher.forward(request, response);
 			}
 		}else {
-			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/main.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/quizDone.jsp");
 			dispatcher.forward(request, response);
 		}
 	}
@@ -59,7 +59,9 @@ public class GivingQuizServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("quizList",quizList);
 		int quizNumber = 0;
+		int correctNumber = 0;
 		session.setAttribute("quizNumber",quizNumber);
+		session.setAttribute("correctNumber",correctNumber);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/quiz.jsp");
 		dispatcher.forward(request, response);
 	}
