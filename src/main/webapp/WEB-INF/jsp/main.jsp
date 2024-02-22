@@ -13,12 +13,15 @@
 </head>
 <body>
     <h1>English Quiz</h1>
+    <div class="flex">
     <p class="welcome">Welcome&ensp;<c:out value="${userId}"/>さん</p>
+    <a href =LoginServlet?action=logout class="logout">ログアウト</a>
+    </div>
     <div class="items">
         <form action="GivingQuizServlet?action=1" method="post">
             <input type="submit" class="btn" value="QUIZ">
         </form>
-        <form action="" method="post">
+        <form action="RememberListServlet?action=1" method="post">
             <input type="submit" class="btn" value="RememberList">
         </form>
     </div>

@@ -24,5 +24,28 @@ body{
 .welcome{
     font-size: 30px;
     color: white;
-    margin:20px 70px;
+    margin-top:25px;
+    margin-left: 15rem;
+}
+.flex{
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+}
+.logout{
+	color:white;
+	text-decoration: none;
+	display: block;
+    margin-top: 31px;;
+    background-color: green;
+    width: 100px;
+    text-align: center;
+    padding: 3px;
+    border: solid lightgreen 1px
+}
+.btn:hover{
+	background-color: skyblue;
+}
+.logout:hover{
+	background-color: lightgreen;
 }

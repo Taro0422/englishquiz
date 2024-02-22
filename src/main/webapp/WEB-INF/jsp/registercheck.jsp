@@ -14,7 +14,7 @@
     <h1>Register</h1>
     <p>こちらの情報でお間違いありませんでしょうか？</p>
     <p>User_ID:${accountUser.userId}</p>
-    <p>PASS:${accountUser.pass}</p>
+    <p>PASS:------</p>
     <p>お名前:${accountUser.name}</p>
     <p>メールアドレス:${accountUser.mail }</p>
     <form action="RegisterServlet" class="form1" method="post">

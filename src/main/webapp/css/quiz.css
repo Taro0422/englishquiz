@@ -6,7 +6,7 @@
     display: block;
     color: white;
     font-size: 30px;
-    padding: 60px 45px;
+    padding: 45px 45px;
 }
 .question {
     background-color: white;
@@ -23,7 +23,7 @@
 .flex-box {
     display: flex;
     width: 80%;
-    margin: 3rem auto;
+    margin: 2rem auto;
     font-size: 30px;
 }
 .choice-box {
@@ -37,8 +37,11 @@
 }
 .btn1 {
   width: 200px;
-  height: 30px;
-  font-size:15px;
+  height: 35px;
+  font-size:20px;
+}
+.btn1:hover{
+	background:#E2EDF9;
 }
 .center{
   text-align: center;;
@@ -54,15 +57,21 @@ background-color: #E2EDF9;
 .ex {
     color: white;
     font-size: 25px;
+    width: 80%;
 }    
 .next{
 	color: white;
     text-decoration: none;
-    background-color: #41e717;
+    background-color: green;
     text-align: center;
-    line-height: 1.5;
     width: 50px;
-    border: solid #41e717;
+    border: solid lightgreen 1px;
+    display: block;
+    height: 25px;
+    padding-top: 10px;
+}
+.next:hover{
+	background-color: lightgreen;
 }
 .answer{
 	display: hidden;

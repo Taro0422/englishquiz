@@ -7,6 +7,11 @@ public class Account implements Serializable {
 	private String pass;
 	private String name;
 	private String mail;
+	
+	public Account() {
+        // コンストラクタの処理
+    }
+	
 	public Account(String userId, String pass, String name, String mail) {
 		super();
 		this.userId = userId;
@@ -14,6 +19,10 @@ public class Account implements Serializable {
 		this.name = name;
 		this.mail = mail;
 	}
+	public Account(String userId) {
+        this.userId = userId;
+    }
+	
 	public String getUserId() {
 		return userId;
 	}

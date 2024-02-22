@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,18 +12,21 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.Account;
+import model.DeleteLogic;
+import model.Remember;
+import model.RememberListCreateLogic;
 
 /**
- * Servlet implementation class RegisterCheckServlet
+ * Servlet implementation class RememberListServlet
  */
-@WebServlet("/RegisterCheckServlet")
-public class RegisterCheckServlet extends HttpServlet {
+@WebServlet("/RememberListServlet")
+public class RememberListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RegisterCheckServlet() {
+    public RememberListServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,8 +36,7 @@ public class RegisterCheckServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/register.jsp");
-		dispatcher.forward(request, response);
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -41,19 +44,22 @@ public class RegisterCheckServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		String userId = request.getParameter("userId");
-		String pass = request.getParameter("pass");
-		String name = request.getParameter("name");
-		String mail = request.getParameter("mail");
+		String action = request.getParameter("action");
+		if(action.equals("delete")) {
+			String userId = request.getParameter("userId");
+			String quiz_Id = request.getParameter("quiz_Id");
+			DeleteLogic deleteLogic = new DeleteLogic();
+			deleteLogic.execute(userId,Integer.parseInt(quiz_Id));
+		}else {}
+			HttpSession session = request.getSession();
+			Account userId = new Account((String) session.getAttribute("userId"));
+			RememberListCreateLogic rememberListCreateLogic = new RememberListCreateLogic();
+			List<Remember>rememberList =rememberListCreateLogic.execute(userId);
+			request.setAttribute("rememberList",rememberList);
 		
-		Account accountUser = new Account(userId,pass,name,mail);
-		
-		HttpSession session = request.getSession();
-		session.setAttribute("userId",userId);
-		session.setAttribute("accountUser",accountUser);
-		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/registercheck.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/rememberList.jsp");
 		dispatcher.forward(request, response);
+		
 	}
 
 }

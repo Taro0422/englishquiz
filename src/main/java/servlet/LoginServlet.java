@@ -34,17 +34,28 @@ public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 			String action = request.getParameter("action");
-			if(action.equals("1")) {
-			HttpSession session = request.getSession();
-			int correctNumber = (int) session.getAttribute("correctNumber");
-			correctNumber =0;
-			session.setAttribute("correctNumber",correctNumber);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/main.jsp");
-			dispatcher.forward(request, response);
-		}else {
+			if(action.equals("reset")) {
+				HttpSession session = request.getSession();
+				int correctNumber = (int) session.getAttribute("correctNumber");
+				correctNumber =0;
+				session.setAttribute("correctNumber",correctNumber);
+				RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/main.jsp");
+				dispatcher.forward(request, response);
+			}
+			else if(action.equals("logout")) {
+				HttpSession session = request.getSession();
+				session.invalidate();
+				RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+				dispatcher.forward(request, response);	
+			}
+			else if(action.equals("main")) {
+				RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/main.jsp");
+				dispatcher.forward(request, response);
+			}
+			else {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/register.jsp");
 			dispatcher.forward(request, response);
-		}
+			}
 	}
 
 	/**

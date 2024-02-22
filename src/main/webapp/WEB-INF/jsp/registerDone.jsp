@@ -13,6 +13,6 @@
 <body>
     <h1>Register</h1>
     <p>Userの登録が完了しました。</p>
-    <a href="index.jsp" class="btn1">Topへ</a>
+    <a href="index.jsp" class="btn2">Topへ</a>
 </body>
 </html>

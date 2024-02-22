@@ -33,7 +33,7 @@
     	</div>
     	<input type="hidden" name ="question"value="${quizList[quizNumber].question}">
     	<input type="hidden" name ="answer"value="${quizList[quizNumber].answer}">
-    	<input type="hidden" name ="quizId"value="${quizList[quizNumber].quiz_Id}">
+    	<input type="hidden" name ="quiz_Id"value="${quizList[quizNumber].quiz_Id}">
     	<div class="center">
     	<input type="submit" value="Answer" class=btn1>
     	</div>

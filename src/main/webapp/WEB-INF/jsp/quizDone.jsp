@@ -25,7 +25,7 @@
         <c:if test="${correctNumber < 6}">
         <p class=evaluation>再度やり直しましょう</p>
         </c:if>
-    	<a href =LoginServlet?action=1 class="toMain">メインへ </a>
+    	<a href =LoginServlet?action=reset class="toMain">メインへ </a>
 		
 </body>
 </html>

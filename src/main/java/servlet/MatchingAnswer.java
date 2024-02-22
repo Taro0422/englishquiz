@@ -43,10 +43,9 @@ public class MatchingAnswer extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			request.setCharacterEncoding("UTF-8");
 			HttpSession session = request.getSession();
-			String quizId = request.getParameter("quizId");
 			String userChoice = request.getParameter("choice");
-			String question = request.getParameter("question");
 			String answerChoice = request.getParameter("answer");
+			String quiz_Id = request.getParameter("quiz_Id");
 			int correctNumber = (int) session.getAttribute("correctNumber");
 			
 			if(userChoice .equals(answerChoice)) {
@@ -54,9 +53,9 @@ public class MatchingAnswer extends HttpServlet {
 				session.setAttribute("correctNumber",correctNumber);
 			}else {
 				QuizResultLogic quizresultlogic = new QuizResultLogic();
-				Account userId = (Account)session.getAttribute("userId");
-				Quiz quizId2 = (Quiz)session.getAttribute("quizId");
-				quizresultlogic.execute(userId,quizId2);
+				Account userId = new Account((String) session.getAttribute("userId"));
+				Quiz quiz_ID = new Quiz(Integer.parseInt(quiz_Id));
+				quizresultlogic.execute(userId,quiz_ID);
 			}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/quizAnswer.jsp");
