@@ -19,11 +19,9 @@ You can watch how the "englishquiz" works on Youtube.<br>
 * ApacheTomcat9
 * H2
   
-# Usage
-
-
 # Note
-
+This app helps people study English. Use this app and you can use English more.<br>
+このアプリは英語を勉強する人の手出すになります。このアプリを使えば、もっと英語を使えるようになります。<br>
 
 # Author
 
