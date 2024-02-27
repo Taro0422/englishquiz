@@ -20,7 +20,7 @@
     	<p class="question">${quizList[quizNumber].question}</p>
    <form action="MatchingAnswer" method="post">
     	<div class="flex-box">
-    	<input type="radio" name="choice" value="${quizList[quizNumber].choice_a}" class=choice id=box1>
+    	<input type="radio" name="choice" value="${quizList[quizNumber].choice_a}" class=choice id=box1 checked>
     	<label class= choice-box for=box1>${quizList[quizNumber].choice_a}</label>
     	<input type="radio" name="choice" value="${quizList[quizNumber].choice_b}" class=choice id=box2>
     	<label class= choice-box for=box2>${quizList[quizNumber].choice_b}</label>
